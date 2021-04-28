@@ -124,12 +124,19 @@ public class FXMLController {
     @FXML
     void handleReset(ActionEvent event) {
     	model.reset();
+    	//refersh
+    	for(Button b:letters.values()) {
+    		b.setDefaultButton(false);
+    	}
+    	txtResult.clear();
+    	txtParola.clear();
     }
     
     @FXML
     void handleRisolvi(ActionEvent event) {
     	List<String> tutte = model.trovaTutte();
     	
+    	txtParola.clear();
     	txtResult.clear();
     	txtResult.appendText(String.format("Ho trovato %d soluzioni\n", tutte.size()));
     	for(String s : tutte) {

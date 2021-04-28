@@ -15,7 +15,7 @@ import javafx.beans.property.StringProperty;
  */
 public class Board {
 	private List<Pos> positions;
-	private Map<Pos, StringProperty> cells;
+	private Map<Pos, StringProperty> cells; //associa al valore del bottone in valore corrispondente senza fare getText()
 
 	private int size;
 
